@@ -1,0 +1,93 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.header-logo {
+    margin-top: 20px;
+    height: 50px;
+}
+
+.header-button {
+    background: none;
+    border: 1px solid #3DCFB6;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.left-side-header {
+    display: flex;
+    gap: 20px;
+
+    >p {
+        font-family: "Fira Code";
+        font-weight: 200;
+        font-size: 20px;
+
+        &:hover {
+            color: #3DCFB6;
+            cursor: pointer;
+        }
+    }
+}
+
+.header-hero {
+    background: #1C1C1C;
+    background: linear-gradient(13deg, rgba(28, 28, 28, 1) 45%, rgba(8, 70, 59, 1) 100%);
+}
+
+.hero {
+
+
+    height: 100vh;
+    width: 100%;
+    color: white;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-family: "Fira Code";
+    font-weight: 200;
+    font-size: 40px;
+}
+
+h1 {
+    font-size: 128px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 50px;
+    >button {
+            background: none;
+            border: 1px solid white;
+            border-radius: 30px;
+            height: 50px;
+            width: 160px;
+            color: white;
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 20px;
+            cursor: pointer;
+            &:hover {
+                border: 1px solid #3DCFB6;
+                color: #3DCFB6;
+            }
+        }
+}
+
