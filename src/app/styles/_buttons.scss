@@ -1,0 +1,22 @@
+.hero-buttons {
+    display: flex;
+    gap: 50px;
+
+    >button {
+        background: none;
+        border: 1px solid white;
+        border-radius: 30px;
+        height: 50px;
+        width: 160px;
+        color: white;
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 20px;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid $primary-color-1;
+            color: $primary-color-1;
+        }
+    }
+}
