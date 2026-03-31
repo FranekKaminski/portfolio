@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./header/header.component";
-import { AboutmeComponent } from "./aboutme/aboutme.component";
-import { SkillsComponent } from "./skills/skills.component";
-import { PortfolioComponent } from "./portfolio/portfolio.component";
-import { ReferencesComponent } from "./references/references.component";
-import { ContactmeComponent } from "./contactme/contactme.component";
-import { FooterComponent } from "./footer/footer.component";
-import { HeroComponent } from "./hero/hero.component";
+import { HeaderComponent } from "./layout/header/header.component";
+import { FooterComponent } from "./layout/footer/footer.component";
+import { LandingPageComponent } from "./components/landing-page/landing-page.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, AboutmeComponent, SkillsComponent, PortfolioComponent, ReferencesComponent, ContactmeComponent, FooterComponent, HeroComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, LandingPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
