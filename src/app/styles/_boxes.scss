@@ -1,0 +1,14 @@
+@use "./variables" as *;
+
+.neon-box {
+    background: $box-background-1;
+    border: 1px solid $primary-color-1;
+    border-radius: 30px;
+    height: 550px;
+    width: 550px;
+    >p {
+        margin-left: 30px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+}

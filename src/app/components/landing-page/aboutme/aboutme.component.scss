@@ -1,5 +1,54 @@
+@use "../../../styles/boxes" as *;
+
 p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.profilepic {
+    height: 550px;
+    width: 550px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    position: absolute;
+    top: 0px;
+    left: 25px;
+}
+
+.stripes {
+    height: 550px;
+    width: 550px;
+    position: relative;
+    top: 25px;
+    z-index: -1;
+}
+
+.left-about-me {
+    position: relative;
+}
+
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 30px;
+    gap: 50px;
+}
+
+.bulletpoint {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    >img {
+        width: 20px;
+        height: 20px;
+    }
+
+    >p {
+        margin-left: 10px;
+        margin-right: 20px;
+    }
 }
