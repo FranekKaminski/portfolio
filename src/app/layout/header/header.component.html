@@ -1,0 +1,13 @@
+<section class="header-section width_control">
+    <section class="header">
+        <div class="left-side-header">
+            <div class="lang-switch">
+                <button [class.active]="currentLang() === 'en'" (click)="useLanguage('en')">EN</button>
+                <button [class.active]="currentLang() === 'de'" (click)="useLanguage('de')">DE</button>
+            </div>
+            <p>{{"header.aboutme" | translate}}</p>
+            <p>{{"header.skills" | translate}}</p>
+            <p>{{"header.projects" | translate}}</p>
+        </div>
+        <img class="logo" src="/favicon/favicon.png" alt="Logo">
+</section>

@@ -1,5 +1,53 @@
+@use "../../../styles/variables" as *;
+
 p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 30px;
+    gap: 40px;
+    background: #08463B;
+    background: radial-gradient(circle, rgba(8, 70, 59, 1) 0%, rgba(28, 28, 28, 1) 20%);
+    background-position: left;
+    height: 700px;
+
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 50px;
+    height: 500px;
+}
+
+.skillcontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100px;
+    width: 80px;
+}
+
+.skillicon {
+    height: 55px;
+    width: auto;
+    transition: 0.2s;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+.skillicontext {
+    font-size: 18px;
+    font-family: "Fira Code";
+    font-weight: 400;
+    text-align: center;
 }

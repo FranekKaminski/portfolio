@@ -18,8 +18,8 @@ h3 {
     font-size: 64px;
     color: $primary-color-1;
     margin-left: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h4 {
@@ -27,6 +27,12 @@ h4 {
     font-size: 24px;
     color: $primary-color-1;
     margin-bottom: 20px;
+}
+
+.basicwhite16 {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
 }
 
 .basicwhite18 {
@@ -43,4 +49,25 @@ h4 {
     &:hover {
         color: white;
     }
+}
+
+.skilltext {
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 30px;
+}
+
+.skilltext2 {
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 24px;
+    color: $primary-color-1;
+}
+
+.copyrighttext {
+    font-family: "Fira Code";
+    font-size: 18px;
+    font-weight: 400;
+    color: $primary-color-1;
 }

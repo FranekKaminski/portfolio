@@ -3,8 +3,8 @@
     font-family: "Karla";
 }
 
-* {
-    cursor: url("/Cursor.png"), auto;
+body {
+    cursor: url("../../../public/icons/Cursor.png"), 50%;
 }
 
 body {
@@ -12,4 +12,12 @@ body {
     flex-direction: column;
     background: #1C1C1C;
     color: white;
+}
+
+.logo {
+    height: 50px;
+}
+
+.margintop {
+    margin-top: 20px;
 }

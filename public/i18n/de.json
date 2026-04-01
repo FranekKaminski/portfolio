@@ -1,0 +1,11 @@
+{
+    "header": {
+        "aboutme": "Über mich",
+        "skills": "Skills",
+        "projects": "Projekte"
+    },
+    "hero": {
+        "workbutton": "Projektübersicht",
+        "contactmebutton": "Kontakt"
+    }
+}

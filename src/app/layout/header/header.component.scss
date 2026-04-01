@@ -1,0 +1,70 @@
+@use "../../styles/variables" as *;
+
+.header-section {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
+.lang-switch {
+    display: flex;
+    border: 1px solid $primary-color-1;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+
+    &:hover {
+        border-color: white;
+
+        button:not(.active) {
+            color: $primary-color-1;
+        }
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        color: $primary-color-1-low;
+        font-family: "Fira Code";
+        font-size: 16px;
+        font-weight: 400;
+        padding: 5px 12px;
+        cursor: pointer;
+        border-radius: 18px;
+        transition: background 0.2s, color 0.2s;
+
+        &.active {
+            background: $primary-color-1;
+            color: white;
+            font-weight: 700;
+        }
+    }
+}
+
+.left-side-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    >p {
+        font-family: "Fira Code";
+        font-weight: 200;
+        font-size: 20px;
+
+        &:hover {
+            color: $primary-color-1;
+            cursor: pointer;
+        }
+    }
+}

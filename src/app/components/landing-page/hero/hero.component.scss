@@ -1,49 +1,4 @@
 @use "../../../styles/variables" as *;
-@use "../../../styles/buttons";
-
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 30px;
-    margin-left: 30px;
-    padding-top: 20px;
-}
-
-.header-logo {
-    height: 50px;
-}
-
-.header-button {
-    background: none;
-    border: 1px solid $primary-color-1; // $primary-color-1;
-    color: white;
-    border-radius: 10px;
-    font-size: 16px;
-}
-
-.left-side-header {
-    display: flex;
-    gap: 20px;
-
-    >p {
-        font-family: "Fira Code";
-        font-weight: 200;
-        font-size: 20px;
-
-        &:hover {
-            color: $primary-color-1;
-            cursor: pointer;
-        }
-    }
-}
-
-.header-hero {
-    background: $primary-color-2;
-    background: linear-gradient(13deg, rgba(28, 28, 28, 1) 45%, rgba(8, 70, 59, 1) 100%);
-    overflow: hidden;
-}
 
 .hero {
     height: 70vh;
@@ -53,6 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: $primary-color-2;
+    background: linear-gradient(10deg, rgba(28, 28, 28, 1) 35%, rgba(8, 70, 59, 1) 100%);
 }
 
 .hero-content {
