@@ -1,7 +1,43 @@
 @use "../../../styles/variables" as *;
 
-p {
+.portfoliosection {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    height: 700px;
+}
+
+.portfolioarticle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $primary-color-1;
+    padding: 30px 0px;
+    width: 850px;
+    transition: ease-in 150ms;
+    &:hover {
+        background: $box-background-2;
+    }
+    >p {
+        margin-right: 30px;
+    }
+}
+
+.portfolioarticle2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $primary-color-1;
+    padding: 30px 0px;
+    width: 850px;
+}
+
+.portfolio-box {
+    margin-left: 30px;
+    height: 100%;
+}
+
+h3 {
+    margin-left: 0px;
+    margin-bottom: 0px;
 }
