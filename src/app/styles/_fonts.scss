@@ -29,6 +29,14 @@ h4 {
     margin-bottom: 20px;
 }
 
+h5 {
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: $primary-color-1;
+}
+
 .basicwhite16 {
     font-weight: 400;
     font-size: 16px;
@@ -70,4 +78,23 @@ h4 {
     font-size: 18px;
     font-weight: 400;
     color: $primary-color-1;
+}
+
+.references-text {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.textcolor {
+    color: $primary-color-1;
+    font-weight: 700;
+}
+
+.formquestions {
+    font-weight: 500;
+    font-size: 24px;
+    font-family: "Fira Code";
+    color: $primary-color-1;
+    margin-bottom: 20px;
 }

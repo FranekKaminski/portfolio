@@ -5,3 +5,98 @@ p {
     align-items: center;
     justify-content: center;
 }
+
+.references-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reference-box {
+    position: relative;
+    background: $box-background-2;
+    border: 1px solid $primary-color-1;
+    border-radius: 30px;
+    height: 180px;
+    width: 550px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reference-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.reference-buttons {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    .arrow {
+        width: 20px;
+        transition: transform 150ms;
+        cursor: pointer;
+
+        &:hover {
+            color: $primary-color-1;
+        }
+    }
+
+    .arrow-left {
+        &:hover {
+            transform: translateX(-5px) scale(1.1);
+        }
+    }
+
+    .arrow-right {
+        &:hover {
+            transform: translateX(5px) scale(1.1);
+        }
+    }
+}
+
+.dots {
+    display: flex;
+    gap: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.dot.active {
+    background: rgba(61, 207, 182, 1);
+}
+
+.bottom-references {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+.whiteline {
+    height: 1px;
+    width: 300px;
+    background: white;
+}
+
+.quotes {
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    height: 60px;
+    z-index: 1;
+}

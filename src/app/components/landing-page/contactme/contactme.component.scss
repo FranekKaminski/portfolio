@@ -1,7 +1,123 @@
 @use "../../../styles/variables" as *;
 
-p {
+.contactme-section {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+}
+
+h3 {
+    margin-left: 0px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+.policyagree {
+    margin-top: 40px;
+}
+
+button {
+    margin-top: 40px;
+}
+
+.contactme-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    border-bottom: 1px solid $contact-me-line1;
+    border-top: 1px solid $contact-me-line1;
+    padding: 30px 0px;
+    width: 850px;
+    transition: ease-in 150ms;
+
+    &:hover {
+        border-bottom: 1px solid $contact-me-line2;
+        border-top: 1px solid $contact-me-line2;
+    }
+
+    >input {
+        width: 300px;
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 18px;
+        font-weight: 400;
+
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+            font-weight: 400;
+            transition: ease-in 150ms;
+        }
+
+        &:hover::placeholder {
+            color: white;
+        }
+    }
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 15px;
+        width: 15px;
+        border: 2px solid rgba(61, 207, 182, 1);
+        transition: background-color 0.3s ease;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 5px;
+            top: 1px;
+            width: 4px;
+            height: 9px;
+            border: solid rgba(61, 207, 182, 1);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    &:hover .checkmark {
+        background-color: rgba(61, 207, 182, 0.1);
+    }
+
+    input:checked ~ .checkmark {
+        background-color: transparent;
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
 }
