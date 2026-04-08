@@ -5,9 +5,9 @@
                 <button [class.active]="currentLang() === 'en'" (click)="useLanguage('en')">EN</button>
                 <button [class.active]="currentLang() === 'de'" (click)="useLanguage('de')">DE</button>
             </div>
-            <p>{{"header.aboutme" | translate}}</p>
-            <p>{{"header.skills" | translate}}</p>
-            <p>{{"header.projects" | translate}}</p>
+            <a href="#aboutme">{{"header.aboutme" | translate}}</a>
+            <a href="#skills">{{"header.skills" | translate}}</a>
+            <a href="#projects">{{"header.projects" | translate}}</a>
         </div>
         <img class="logo" src="favicon/favicon.png" alt="Logo">
 </section>

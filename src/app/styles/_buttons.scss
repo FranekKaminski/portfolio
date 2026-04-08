@@ -1,11 +1,34 @@
 @use "./variables" as *;
 
+@keyframes slideText {
+    0% {
+        transform: translateX(0px);
+    }
+
+    45% {
+        transform: translateX(-160px);
+    }
+
+    45.001% {
+        transform: translateX(160px);
+    }
+
+    55% {
+        transform: translateX(160px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 .hero-buttons {
     display: flex;
     gap: 50px;
 }
+
 .main-button {
-background: none;
+    background: none;
     border: 1px solid white;
     border-radius: 30px;
     height: 50px;
@@ -16,10 +39,21 @@ background: none;
     margin-top: 20px;
     cursor: pointer;
     transition: 0.3s;
+    overflow: hidden;
 
     &:hover {
         border: 1px solid $primary-color-1;
         color: $primary-color-1;
+    }
+
+    span {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    &:hover span {
+        animation: slideText 2.5s linear infinite;
     }
 }
 
@@ -32,21 +66,29 @@ background: none;
     color: white;
     font-size: 16px;
     font-weight: 300;
+    margin-top: 20px;
     margin-left: 30px;
     cursor: pointer;
     transition: 0.3s;
+    overflow: hidden;
 
     &:hover {
         border: 1px solid $primary-color-1;
         color: $primary-color-1;
+    }
+
+    span {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    &:hover span {
+        animation: slideText 2.5s linear infinite;
     }
 }
 
 .agreepolicytext {
     font-weight: 400;
     font-size: 15px;
-}
-
-.checkbox {
-    
 }
