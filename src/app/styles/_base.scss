@@ -13,10 +13,11 @@ body {
     flex-direction: column;
     background: #1C1C1C;
     color: white;
+    overflow-x: hidden;
 }
 
 .logo {
-    height: 50px;
+    height: 35px;
 }
 
 .margintop {
@@ -26,4 +27,6 @@ body {
 .section-padding {
     padding-top: 60px;
     padding-bottom: 60px;
+    margin-right: 50px;
+    margin-left: 50px;
 }

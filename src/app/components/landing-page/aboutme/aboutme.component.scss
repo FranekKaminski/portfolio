@@ -13,7 +13,7 @@ p {
     object-position: center;
     border-radius: 30px;
     position: absolute;
-    top: 0px;
+    top: -10px;
     left: 25px;
 }
 
@@ -31,9 +31,8 @@ p {
 
 .about-me {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 130px;
 }
 
 .bulletpoint {
@@ -42,8 +41,8 @@ p {
     margin-left: 20px;
 
     >img {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
     }
 
     >p {

@@ -92,7 +92,7 @@ button {
         left: 0;
         height: 15px;
         width: 15px;
-        border: 2px solid rgba(61, 207, 182, 1);
+        border: 2px solid $primary-color-1;
         transition: background-color 0.3s ease;
 
         &:after {
@@ -103,14 +103,14 @@ button {
             top: 1px;
             width: 4px;
             height: 9px;
-            border: solid rgba(61, 207, 182, 1);
+            border: solid $primary-color-1;
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
         }
     }
 
     &:hover .checkmark {
-        background-color: rgba(61, 207, 182, 0.1);
+        background-color: $box-background-1;
     }
 
     input:checked ~ .checkmark {

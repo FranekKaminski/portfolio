@@ -8,8 +8,7 @@ p {
 
 .skills-section {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    gap: 130px;
     background: #08463B;
     background: radial-gradient(circle, rgba(8, 70, 59, 1) 0%, rgba(28, 28, 28, 1) 20%);
     background-position: left;
@@ -18,9 +17,10 @@ p {
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 80px;
     margin-top: 50px;
-    height: 500px;
+    height: 450px;
+    width: 600px;
 }
 
 .skillcontainer {
@@ -47,4 +47,8 @@ p {
     font-family: "Fira Code";
     font-weight: 400;
     text-align: center;
+}
+
+.neon-box {
+    height: 490px;
 }
