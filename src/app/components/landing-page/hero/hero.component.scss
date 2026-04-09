@@ -1,6 +1,7 @@
 @use "../../../styles/variables" as *;
 
 .hero {
+    position: relative;
     height: 100vh;
     width: 100%;
     color: white;
@@ -24,11 +25,15 @@
     rotate: -3deg;
     height: 70px;
     background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     width: 105%;
+    left: -2.5%;
     display: flex;
     position: absolute;
     bottom: 50px;
     overflow: hidden;
+    z-index: 2;
 }
 
 .moving-text-inner {
@@ -62,6 +67,7 @@
     position: absolute;
     left: -35px;
     bottom: 0;
+    z-index: 1;
 }
 
 .rightelements {
@@ -73,6 +79,7 @@
     position: absolute;
     right: 60px;
     bottom: 0;
+    z-index: 1;
 }
 
 .social-wrapper {
@@ -144,4 +151,16 @@ a {
     width: 25px;
     border: 1px solid $primary-color-1;
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 660px) {
+    .rightelements {
+        right: -25px;
+    }
+    .leftelements {
+        left: -125px;
+    }
 }

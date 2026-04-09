@@ -10,8 +10,10 @@ p {
     display: flex;
     gap: 130px;
     background: #08463B;
-    background: radial-gradient(circle, rgba(8, 70, 59, 1) 0%, rgba(28, 28, 28, 1) 20%);
-    background-position: left;
+    background: radial-gradient(circle, rgba(8, 70, 59, 1) 0%, rgba(28, 28, 28, 1) 300px);
+    background-position: -700px;
+    background-repeat: no-repeat;
+    margin-left: 0px !important;
 }
 
 .skills {
@@ -42,6 +44,18 @@ p {
     }
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .skillicontext {
     font-size: 18px;
     font-family: "Fira Code";
@@ -51,4 +65,38 @@ p {
 
 .neon-box {
     height: 490px;
+}
+
+.left-skills {
+    margin-left: 30px;
+}
+
+@media (max-width: 660px) {
+    .neon-box {
+        height: 530px;
+        width: 380px;
+    }
+
+    .left-skills {
+        margin-left: 0px;
+    }
+
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        margin-left: 30px !important;
+    }
+
+    .skills {
+        justify-content: center;
+        width: 380px;
+        height: 700px;
+        gap: 40px;
+        margin-top: 0px;
+    }
+
+    .skillicon {
+        animation: pulse 2.5s ease-in-out infinite;
+    }
 }

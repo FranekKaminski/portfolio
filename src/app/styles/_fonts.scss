@@ -82,6 +82,15 @@ h5 {
     color: $primary-color-1;
 }
 
+.copyrighttext_mobile {
+    display: none;
+    font-family: "Fira Code";
+    font-size: 18px;
+    font-weight: 400;
+    color: $primary-color-1;
+}
+
+
 .references-text {
     font-size: 20px;
     font-weight: 400;
@@ -99,4 +108,22 @@ h5 {
     font-family: "Fira Code";
     color: $primary-color-1;
     margin-bottom: 20px;
+}
+
+@media (max-width: 660px) {
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 56px;
+    }
+
+    h5 {
+        font-size: 26px;
+    }
 }

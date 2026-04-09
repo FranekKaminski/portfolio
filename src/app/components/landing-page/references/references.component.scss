@@ -100,3 +100,22 @@ p {
     height: 60px;
     z-index: 1;
 }
+
+@media (max-width: 660px) {
+.reference-box {
+    width: 300px;
+    height: 230px;
+    padding: 30px;
+}
+
+.reference-boxes {
+    margin-bottom: 40px;
+}
+
+.quotes {
+    height: 45px;
+    top: -30px;
+    left: -10px;
+
+}
+}

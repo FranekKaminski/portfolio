@@ -37,8 +37,14 @@ p {
 
 .bulletpoint {
     display: flex;
+    justify-content: space-between;
     margin-top: 20px;
     margin-left: 20px;
+
+    .locationicon {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
 
     >img {
         width: 24px;
@@ -46,7 +52,33 @@ p {
     }
 
     >p {
-        margin-left: 10px;
+        margin-left: 20px;
         margin-right: 20px;
+    }
+}
+
+@media (max-width: 660px) {
+    .about-me {
+        flex-direction: column;
+        gap: 35px;
+
+        .profilepic {
+            height: 380px;
+            width: 380px;
+            top: 0;
+            left: 5px;
+        }
+
+        .stripes {
+            height: 380px;
+            width: 380px;
+            top: 15px;
+            left: -10px;
+        }
+    }
+
+    .neon-box {
+        height: 620px;
+        width: 380px;
     }
 }

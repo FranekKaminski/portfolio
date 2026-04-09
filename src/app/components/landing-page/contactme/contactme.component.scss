@@ -121,3 +121,29 @@ button {
         display: block;
     }
 }
+
+@media (max-width: 660px) {
+.contactme-section {
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+.questions-container {
+    width: 380px;
+}
+
+.formquestions {
+    margin-top: 0px;
+}
+
+.policyagree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-container {
+    height: 19px;
+    margin-bottom: 0px;
+}
+}
