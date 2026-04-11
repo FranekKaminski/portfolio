@@ -6,6 +6,68 @@
     },
     "hero": {
         "workbutton": "Check my work",
-        "contactmebutton": "Contact me"
-    }  
+        "contactmebutton": "Contact me",
+        "fullstack": "Full Stack Developer",
+        "name": "Franek Kaminski",
+        "available": "Available for remote work",
+        "bullet": "•",
+        "location": "Based in Achim",
+        "email": "franek.kaminski@gmx.de"
+    },
+    "aboutme": {
+        "heading": "Who I Am",
+        "title": "About me",
+        "intro": "Hey there! I'm Franek! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
+        "bullet1": "Where are you based? Would you be open to working remotely or potentially relocating?",
+        "bullet2": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
+        "bullet3": "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and collaboration."
+    },
+    "skills": {
+        "heading": "Technologies",
+        "title": "Skill Set",
+        "intro": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.",
+        "needText": "You need",
+        "anotherSkill": "another skill?",
+        "followUp": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+        "button": "Let's Talk"
+    },
+    "portfolio": {
+        "heading": "Portfolio",
+        "title": "Featured Projects",
+        "intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "project1": "Join",
+        "project2": "El Pollo Loco",
+        "project3": "DA Bubble"
+    },
+    "references": {
+        "heading": "What my colleagues say about me",
+        "text": "Franek has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+        "author": "H.Janisch - Team Partner"
+    },
+    "contactme": {
+        "heading": "Contact me",
+        "titleLine1": "Let's work",
+        "titleLine2": "together",
+        "subtitle": "Got a problem to solve?",
+        "intro1": "Encourage people to contact you and describe what role you are interested in.",
+        "intro2": "Show that you will add value to their projects through your work.",
+        "intro3": "Need a Fullstack Developer?",
+        "talk": "Let's talk!",
+        "nameQuestion": "What's your name?",
+        "namePlaceholder": "Your name goes here",
+        "emailQuestion": "What's your email?",
+        "emailPlaceholder": "youremail@email.com",
+        "helpQuestion": "How can I help you?",
+        "helpPlaceholder": "Hello Franek, I am interested in...",
+        "privacyText": "I've read the privacy policy and agree to the processing of my data as outlined.",
+        "button": "Send message"
+    },
+    "footer": {
+        "jobTitle": "Full Stack Developer",
+        "location": "Achim Germany",
+        "copyright": "© Franek Kaminski 2026",
+        "github": "Github",
+        "email": "Email",
+        "legalNotice": "Legal Notice"
+    }
 }
