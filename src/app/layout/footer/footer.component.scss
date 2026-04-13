@@ -52,7 +52,7 @@ p {
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 650px) {
     .copyrighttext {
         display: none;
     }
@@ -62,5 +62,6 @@ p {
     .footer-section {
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: 40px;
     }
 }

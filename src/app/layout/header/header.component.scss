@@ -1,99 +1,6 @@
-// Responsive mobile header styles
-@media (max-width: 660px) {
-    .desktop-only {
-        display: none !important;
-    }
-    .mobile-only {
-        display: flex !important;
-    }
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 12px;
-        padding-top: 12px;
-        position: relative;
-    }
-    .mobile-logo {
-        display: block;
-        width: 48px;
-        height: 48px;
-        object-fit: contain;
-        margin-right: auto;
-    }
-    .desktop-logo {
-        display: none !important;
-    }
-    .burger-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        gap: 6px;
-        z-index: 101;
-        margin-left: auto;
-        span {
-            display: block;
-            width: 28px;
-            height: 4px;
-            background: $primary-color-1;
-            border-radius: 2px;
-            transition: all 0.2s;
-        }
-    }
-    .mobile-dialog {
-        position: fixed;
-        top: 16px;
-        right: 16px;
-        z-index: 200;
-        background: $primary-gradient-1;
-        border: 2px solid $primary-color-1;
-        border-radius: 18px;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-        padding: 24px 20px 16px 20px;
-        min-width: 180px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        animation: fadeInDialog 0.2s;
-    }
-    .mobile-dialog-content {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        width: 100%;
-        align-items: flex-end;
-        a {
-            color: $primary-color-1;
-            font-size: 18px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: color 0.2s;
-            &:hover {
-                color: white;
-            }
-        }
-        .mobile-lang-switch {
-            margin-top: 10px;
-            button {
-                font-size: 16px;
-                padding: 4px 10px;
-            }
-        }
-    }
-    @keyframes fadeInDialog {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-}
-
-.mobile-only {
-    display: none;
-}
 @use "../../styles/variables" as *;
+
+
 
 .header-section {
     position: absolute;
@@ -109,9 +16,83 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     margin-right: 30px;
     margin-left: 30px;
     padding-top: 20px;
+}
+
+.mobile-logo,
+.mobile-menu-button,
+.mobile-menu-dialog {
+    display: none;
+}
+
+.mobile-menu-button {
+    background: transparent;
+    border: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+
+    span {
+        width: 20px;
+        height: 2px;
+        background: $primary-color-1;
+        border-radius: 2px;
+        transition: background 0.2s ease;
+    }
+
+    &:hover {
+        border-color: white;
+
+        span {
+            background: white;
+        }
+    }
+}
+
+.mobile-menu-dialog {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 220px;
+    border: 1px solid $primary-color-1;
+    border-radius: 20px;
+    background: $primary-gradient-1;
+    padding: 18px;
+    box-sizing: border-box;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    >a {
+        font-family: "Fira Code";
+        font-weight: 300;
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: $primary-color-1;
+        }
+    }
+}
+
+.mobile-lang-switch {
+    margin-top: 4px;
+}
+
+.desktop-logo {
+    display: block;
 }
 
 .lang-switch {
@@ -190,11 +171,33 @@
 
 
 @media (max-width: 660px) {
+    .header {
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-top: 12px;
+    }
+
     .left-side-header {
         display: none;
     }
 
-    .logo {
+    .desktop-logo {
         display: none;
     }
+
+    .mobile-logo {
+        display: block;
+        width: 90px;
+        height: auto;
+    }
+
+    .mobile-menu-button {
+        display: inline-flex;
+    }
+
+    .mobile-menu-dialog {
+        display: flex;
+    }
+
+
 }

@@ -3,7 +3,7 @@
 .contactme-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 10px;
 }
 
 h3 {
@@ -36,7 +36,7 @@ button {
     border-bottom: 1px solid $contact-me-line1;
     border-top: 1px solid $contact-me-line1;
     padding: 30px 0px;
-    width: 850px;
+    width: 100%;
     transition: ease-in 150ms;
 
     &:hover {
@@ -122,14 +122,14 @@ button {
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 1030px) {
 .contactme-section {
     flex-direction: column;
     gap: 60px;
     margin-bottom: 50px;
 }
 .questions-container {
-    width: 380px;
+    width: 100%;
 }
 
 .formquestions {

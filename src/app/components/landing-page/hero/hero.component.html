@@ -4,8 +4,8 @@
         <h1>{{"hero.name" | translate}}</h1>
 
         <div class="hero-buttons">
-            <button class="main-button"><span>{{"hero.workbutton" | translate}}</span></button>
-            <button class="main-button"><span>{{"hero.contactmebutton" | translate}}</span></button>
+            <a class="main-button" href="#portfolio"><span>{{"hero.workbutton" | translate}}</span></a>
+            <a class="main-button" href="#contactme"><span>{{"hero.contactmebutton" | translate}}</span></a>
         </div>
     </div>
     <div class="moving-text">
@@ -43,9 +43,9 @@
         <div class="coloredline"></div>
     </div>
     <div class="rightelements">
-        <a href="mailto:franek.kaminski@gmx.de" class="hero-email-link">
-            <img class="hero-email-icon" src="icons/hero/mail.png" alt="Mail Icon">
-            <span class="hero-email-text">{{"hero.email" | translate}}</span>
+        <a class="hero-email" href="mailto:franek.kaminski@gmx.de">{{"hero.email" | translate}}</a>
+        <a class="hero-mail-mobile social-wrapper" href="mailto:franek.kaminski@gmx.de" aria-label="Send email">
+            <img class="hero-socials" src="icons/hero/mail.png" alt="mail icon">
         </a>
         <div class="social-wrapper">
             <img class="hero-socials" src="icons/hero/github.png" alt="github icon">

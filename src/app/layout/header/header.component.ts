@@ -1,17 +1,16 @@
 import { Component, signal, inject } from '@angular/core';
-import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe, TranslateDirective],
+  imports: [TranslatePipe],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   private translate = inject(TranslateService);
   currentLang = signal(this.translate.currentLang || 'en');
-
-  mobileMenuOpen = false;
+  isMobileMenuOpen = signal(false);
 
   useLanguage(language: string): void {
     this.translate.use(language);
@@ -19,10 +18,10 @@ export class HeaderComponent {
   }
 
   toggleMobileMenu(): void {
-    this.mobileMenuOpen = !this.mobileMenuOpen;
+    this.isMobileMenuOpen.update((isOpen) => !isOpen);
   }
 
   closeMobileMenu(): void {
-    this.mobileMenuOpen = false;
+    this.isMobileMenuOpen.set(false);
   }
 }
