@@ -1,12 +1,14 @@
 @use "../../../styles/variables" as *;
 
-.portfoliosection {
+.portfolio-section {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: start;
+    flex-direction: row !important;
 }
 
 .portfolioarticle {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +19,7 @@
 
     &:hover {
         background: $box-background-2;
+        cursor: pointer;
     }
 
     >p {
@@ -34,12 +37,181 @@
 }
 
 .portfolio-box {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
     margin-left: 0px;
     margin-bottom: 0px;
+}
+
+.portfolio-image {
+    position: absolute;
+    left: calc(100% + 40px);
+    /* 40px right of the article */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    pointer-events: none;
+    z-index: 10;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        border-radius: 16px;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.portfolio-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.portfolio-dialog {
+    background: $primary-gradient-1;
+    border: 1px solid $primary-color-1;
+    border-radius: 24px;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    max-width: 95%;
+    height: 600px;
+    position: relative;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5);
+
+    .dialog-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45%;
+
+        h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .dialog-actions {
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    .dialog-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        position: relative;
+
+        .close-btn {
+            position: absolute;
+            top: -30px;
+            right: 0px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+
+            .img-hover {
+                display: none;
+            }
+
+            &:hover {
+                .img-default {
+                    display: none;
+                }
+
+                .img-hover {
+                    display: block;
+                }
+            }
+        }
+
+        .dialog-image-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .dialog-image {
+                max-width: 100%;
+                max-height: 90%;
+                object-fit: contain;
+                border-radius: 16px;
+            }
+        }
+
+        .next-btn {
+            position: absolute;
+            bottom: -30px;
+            right: 0px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: none;
+            border: none;
+            color: $primary-color-1;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+
+            img {
+                width: 20px;
+                transition: transform 0.2s ease;
+            }
+
+            &:hover {
+                color: white;
+
+                img {
+                    transform: translateX(6px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .portfolio-section {
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+
+    .portfolio-image {
+        display: none;
+    }
 }
 
 @media (max-width: 660px) {
@@ -69,7 +241,7 @@ h3 {
 
     .firstptag {
         >br {
-            display:none;
+            display: none;
         }
     }
 }

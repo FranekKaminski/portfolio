@@ -1,8 +1,8 @@
 {
     "header": {
-        "aboutme":"About me",
-        "skills":"Skills",
-        "projects":"Projects"
+        "aboutme": "About me",
+        "skills": "Skills",
+        "projects": "Projects"
     },
     "hero": {
         "workbutton": "Check my work",
@@ -37,7 +37,24 @@
         "intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
         "project1": "Join",
         "project2": "El Pollo Loco",
-        "project3": "DA Bubble"
+        "project3": "DA Bubble",
+        "dialog": {
+            "project1": {
+                "title": "Join",
+                "description": "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories."
+            },
+            "project2": {
+                "title": "El Pollo Loco",
+                "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+            },
+            "project3": {
+                "title": "DA Bubble",
+                "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+            },
+            "github": "GitHub",
+            "liveTest": "Live Test",
+            "nextProject": "Next Project"
+        }
     },
     "references": {
         "heading": "What my colleagues say about me",

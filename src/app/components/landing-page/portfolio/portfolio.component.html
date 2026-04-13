@@ -5,17 +5,72 @@
         <article class="portfolioarticle2">
             <p class="basicwhite18 firstptag">{{"portfolio.intro" | translate}}</p>
         </article>
-        <article class="portfolioarticle">
-            <p class="skilltext">{{"portfolio.project1" | translate}}</p>
+        <article class="portfolioarticle" (mouseenter)="hoveredIndex = 0" (mouseleave)="hoveredIndex = null"
+            (click)="openDialog(0)">
+            <p class="skilltext">{{"portfolio.project1" | translate}} <img src="icons/portfolio/arrow_outward.png"
+                    alt="arrow icon"></p>
             <p class="basicwhite18">Angular | TypeScript | HTML | CSS | Firebase</p>
+            <div class="portfolio-image">
+                <img src="icons/portfolio/join.png" alt="Join" [class.show]="hoveredIndex === 0">
+            </div>
         </article>
-        <article class="portfolioarticle">
-            <p class="skilltext">{{"portfolio.project2" | translate}}</p>
+        <article class="portfolioarticle" (mouseenter)="hoveredIndex = 1" (mouseleave)="hoveredIndex = null"
+            (click)="openDialog(1)">
+            <p class="skilltext">{{"portfolio.project2" | translate}} <img src="icons/portfolio/arrow_outward.png"
+                    alt="arrow icon"></p>
             <p class="basicwhite18">HTML | CSS | Javascript</p>
+            <div class="portfolio-image">
+                <img src="icons/portfolio/elpolloloco.png" alt="El Pollo Loco" [class.show]="hoveredIndex === 1">
+            </div>
         </article>
-        <article class="portfolioarticle">
-            <p class="skilltext">{{"portfolio.project3" | translate}}</p>
+        <article class="portfolioarticle" (mouseenter)="hoveredIndex = 2" (mouseleave)="hoveredIndex = null"
+            (click)="openDialog(2)">
+            <p class="skilltext">{{"portfolio.project3" | translate}} <img src="icons/portfolio/arrow_outward.png"
+                    alt="arrow icon"></p>
             <p class="basicwhite18">Angular | Firebase | Typescript</p>
+            <div class="portfolio-image">
+                <img src="icons/portfolio/dabubble.png" alt="DA Bubble" [class.show]="hoveredIndex === 2">
+            </div>
         </article>
     </div>
+
+    @if (isDialogOpen) {
+    <div class="portfolio-dialog-overlay" (click)="closeDialog()">
+        <div class="portfolio-dialog" (click)="$event.stopPropagation()">
+            <div class="dialog-left">
+                @switch (selectedProjectIndex) {
+                @case (0) {
+                <h2>{{ 'portfolio.dialog.project1.title' | translate }}</h2>
+                <p class="basicwhite18">{{ 'portfolio.dialog.project1.description' | translate }}</p>
+                }
+                @case (1) {
+                <h2>{{ 'portfolio.dialog.project2.title' | translate }}</h2>
+                <p class="basicwhite18">{{ 'portfolio.dialog.project2.description' | translate }}</p>
+                }
+                @case (2) {
+                <h2>{{ 'portfolio.dialog.project3.title' | translate }}</h2>
+                <p class="basicwhite18">{{ 'portfolio.dialog.project3.description' | translate }}</p>
+                }
+                }
+                <div class="dialog-actions">
+                    <button class="main-button">{{ 'portfolio.dialog.github' | translate }}<img
+                            src="icons/portfolio/arrow_outward_color.png" alt="arrow icon"></button>
+                    <button class="main-button">{{ 'portfolio.dialog.liveTest' | translate }}<img
+                            src="icons/portfolio/arrow_outward_color.png" alt="arrow icon"></button>
+                </div>
+            </div>
+            <div class="dialog-right">
+                <button class="close-btn" (click)="closeDialog()">
+                    <img src="icons/portfolio/close_small.png" alt="Close" class="img-default">
+                    <img src="icons/portfolio/close.png" alt="Close" class="img-hover">
+                </button>
+                <div class="dialog-image-container">
+                    <img [src]="projects[selectedProjectIndex].image" alt="Project Image" class="dialog-image">
+                </div>
+                <button class="next-btn" (click)="nextProject()">{{ 'portfolio.dialog.nextProject' | translate }} <img
+                        src="icons/portfolio/arrow_forward.png" alt="next"></button>
+            </div>
+        </div>
+    </div>
+    }
 </section>
