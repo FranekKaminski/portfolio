@@ -11,8 +11,18 @@ export class HeaderComponent {
   private translate = inject(TranslateService);
   currentLang = signal(this.translate.currentLang || 'en');
 
+  mobileMenuOpen = false;
+
   useLanguage(language: string): void {
     this.translate.use(language);
     this.currentLang.set(language);
+  }
+
+  toggleMobileMenu(): void {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  closeMobileMenu(): void {
+    this.mobileMenuOpen = false;
   }
 }

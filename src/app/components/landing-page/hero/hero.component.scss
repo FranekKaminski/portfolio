@@ -1,3 +1,48 @@
+.hero-email-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: $primary-color-1;
+    transition: color 0.2s;
+    &:hover {
+        color: white;
+        .hero-email-icon {
+            filter: brightness(1.2);
+        }
+    }
+}
+
+.hero-email-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.hero-email-text {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: $primary-color-1;
+}
+
+@media (max-width: 660px) {
+    .hero-email-text {
+        display: none;
+    }
+    .hero-email-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .hero-email-link {
+        padding: 8px;
+        border-radius: 50%;
+        background: $primary-gradient-1;
+        border: 2px solid $primary-color-1;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+}
 @use "../../../styles/variables" as *;
 
 .hero {

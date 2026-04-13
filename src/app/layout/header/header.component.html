@@ -1,6 +1,7 @@
 <section class="header-section width_control">
     <section class="header">
-        <div class="left-side-header">
+        <img class="logo mobile-logo" src="icons/logo/FKLogo.png" alt="Logo">
+        <div class="left-side-header desktop-only">
             <div class="lang-switch">
                 <button [class.active]="currentLang() === 'en'" (click)="useLanguage('en')">EN</button>
                 <button [class.active]="currentLang() === 'de'" (click)="useLanguage('de')">DE</button>
@@ -9,5 +10,22 @@
             <a href="#skills">{{"header.skills" | translate}}</a>
             <a href="#projects">{{"header.projects" | translate}}</a>
         </div>
-        <img class="logo" src="icons/logo/FKLogo.png" alt="Logo">
+        <img class="logo desktop-logo" src="icons/logo/FKLogo.png" alt="Logo">
+        <div class="burger-menu mobile-only" (click)="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-dialog" *ngIf="mobileMenuOpen">
+            <div class="mobile-dialog-content">
+                <a href="#aboutme" (click)="closeMobileMenu()">{{"header.aboutme" | translate}}</a>
+                <a href="#skills" (click)="closeMobileMenu()">{{"header.skills" | translate}}</a>
+                <a href="#projects" (click)="closeMobileMenu()">{{"header.projects" | translate}}</a>
+                <div class="lang-switch mobile-lang-switch">
+                    <button [class.active]="currentLang() === 'en'" (click)="useLanguage('en'); closeMobileMenu()">EN</button>
+                    <button [class.active]="currentLang() === 'de'" (click)="useLanguage('de'); closeMobileMenu()">DE</button>
+                </div>
+            </div>
+        </div>
+    </section>
 </section>
