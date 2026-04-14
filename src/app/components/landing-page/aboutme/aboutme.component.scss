@@ -78,7 +78,13 @@ p {
     }
 
     .neon-box {
-        height: 620px;
+        height: 650px;
         width: 380px;
+    }
+}
+
+@media (max-width: 1270px) {
+    .about-me {
+        flex-direction: column;
     }
 }

@@ -86,5 +86,33 @@
         "github": "Github",
         "email": "Email",
         "legalNotice": "Legal Notice"
+    },
+    "imprint": {
+        "headlinemain": "Legal Notice",
+        "title": "Imprint",
+        "section5tmg": "Information according to § 5 TMG",
+        "address": "Franciszek Kaminski<br>Eppenhainerstraße 19<br>28307 Bremen<br>Germany",
+        "contacttitle": "Contact",
+        "contact": "Email: franek.kaminski@gmx.de",
+        "responsible": "Responsible for content according to § 55 para. 2 RStV",
+        "responsibleData": "Franciszek Kaminski<br>Eppenhainerstraße 19<br>28307 Bremen<br>Germany",
+        "liabilityContentTitle": "Liability for Content",
+        "liabilityContentText": "As a service provider, I am responsible for my own content on these pages in accordance with general laws pursuant to § 7 para.1 TMG. According to §§ 8 to 10 TMG, however, I am not obliged to monitor transmitted or stored third-party information.",
+        "liabilityLinksTitle": "Liability for Links",
+        "liabilityLinksText": "My website may contain links to external websites of third parties, over whose content I have no influence. Therefore, I cannot assume any liability for these external contents.",
+        "copyrightTitle": "Copyright",
+        "copyrightText": "The content and works created by the site operator on these pages are subject to German copyright law. Contributions of third parties are marked as such.",
+        "dataprotectionTitle": "Data Protection",
+        "dataprotectionText": "The use of my website is generally possible without providing personal data. If personal data (e.g. via a contact form) is collected on my website, this is always done on a voluntary basis.",
+        "formTitle": "Collection and Processing of Data (Contact Form)",
+        "formText1": "If you send me inquiries via the contact form, your details from the form, including the contact data you provided, will be stored for the purpose of processing the request and for follow-up questions.",
+        "formText2": "The processing of this data is based on Art. 6 para. 1 lit. b GDPR (processing for the performance of a contract or pre-contractual measures) and Art. 6 para. 1 lit. f GDPR (legitimate interest in processing the request).",
+        "formText3": "This data will not be passed on without your consent.",
+        "formText4": "The data you enter in the contact form will remain with me until you request deletion, revoke your consent to storage, or the purpose for data storage no longer applies.",
+        "hostingTitle": "Hosting",
+        "hostingText": "This website is operated on own systems or without explicitly naming a hosting provider.",
+        "disputeTitle": "Dispute Resolution",
+        "disputeText1": "The European Commission provides a platform for online dispute resolution (ODR):<br>https://ec.europa.eu/consumers/odr/",
+        "disputeText2": "I am not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
     }
 }

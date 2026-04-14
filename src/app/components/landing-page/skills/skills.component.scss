@@ -47,9 +47,11 @@ p {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -72,11 +74,19 @@ p {
 
 @media (max-width: 660px) {
     .neon-box {
-        height: 530px;
+        height: 580px;
         width: 380px;
     }
 
     .left-skills {
+        margin-left: 0px;
+    }
+
+    .skills-marginleft {
+        margin-left: 30px;
+    }
+
+    .skilltext {
         margin-left: 0px;
     }
 
@@ -97,5 +107,17 @@ p {
 
     .skillicon {
         animation: pulse 2.5s ease-in-out infinite;
+    }
+}
+
+@media (max-width: 1270px) {
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .skills {
+        justify-content: center;
     }
 }
