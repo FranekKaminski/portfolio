@@ -35,9 +35,27 @@
         "heading": "Portfolio",
         "title": "Ausgewählte Projekte",
         "intro": "Entdecke hier eine Auswahl meiner Arbeit – Interagiere mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+        "skilltext2": "Worüber ist dieses Projekt?",
         "project1": "Join",
         "project2": "El Pollo Loco",
-        "project3": "DA Bubble"
+        "project3": "DA Bubble",
+        "dialog": {
+            "project1": {
+                "title": "Join",
+                "description": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-drop-Funktionen und weise Benutzer sowie Kategorien zu."
+            },
+            "project2": {
+                "title": "El Pollo Loco",
+                "description": "Jump-and-Run-Spiel auf Basis eines objektorientierten Ansatzes. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+            },
+            "project3": {
+                "title": "DA Bubble",
+                "description": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Nachrichten und einer robusten Kanalorganisation."
+            },
+            "github": "GitHub",
+            "liveTest": "Live-Test",
+            "nextProject": "Nächstes Projekt"
+        }
     },
     "references": {
         "heading": "Was meine Kolleg:innen über mich sagen",
@@ -59,8 +77,19 @@
         "emailPlaceholder": "deine.email@beispiel.de",
         "helpQuestion": "Wie kann ich dir helfen?",
         "helpPlaceholder": "Hallo Franek, ich interessiere mich für...",
+        "privacyPrefix": "Ich habe die",
+        "privacyPolicy": "Datenschutzrichtlinie",
+        "privacySuffix": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
         "privacyText": "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-        "button": "Nachricht senden"
+        "button": "Nachricht senden",
+        "errors": {
+            "nameRequired": "Hoppla! Dein Name fehlt",
+            "nameMinlength": "Der Name muss mindestens 3 Zeichen haben",
+            "emailRequired": "Hoppla! Deine E-Mail ist erforderlich",
+            "emailInvalid": "Dies ist keine gültige E-Mail",
+            "messageRequired": "Was möchtest du entwickeln lassen?",
+            "messageMinlength": "Die Nachricht muss mindestens 10 Zeichen haben"
+        }
     },
     "footer": {
         "jobTitle": "Full Stack Entwickler",

@@ -48,6 +48,7 @@
 h3 {
     margin-left: 0px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .portfolio-image {
@@ -97,6 +98,7 @@ h3 {
     background: $primary-gradient-1;
     border: 1px solid $primary-color-1;
     border-radius: 24px;
+    margin: 30px;
     padding: 60px 40px;
     display: flex;
     justify-content: space-between;

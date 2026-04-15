@@ -44,7 +44,7 @@
             <div class="dialog-left">
                 <p class="project-number">{{ selectedProject.number }}</p>
                 <h2>{{ selectedProject.titleKey | translate }}</h2>
-                <p class="skilltext2">What is this project about?</p>
+                <p class="skilltext2">{{ "portfolio.skilltext2" | translate }}</p>
                 <p class="basicwhite18 project-description">{{ selectedProject.descriptionKey | translate }}</p>
                 <div class="dialog-skills">
                     @for (skill of selectedProject.skills; track skill.label) {

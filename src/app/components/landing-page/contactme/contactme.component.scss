@@ -16,6 +16,26 @@ p {
 
 .policyagree {
     margin-top: 40px;
+    display: flex;
+}
+
+.agreepolicytext {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.policy-link {
+    color: $primary-color-1;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 150ms ease-in, text-decoration-color 150ms ease-in;
+
+    &:hover {
+        color: white;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        text-decoration-color: $primary-color-1;
+    }
 }
 
 button {
@@ -48,7 +68,8 @@ button {
         width: 300px;
         background: none;
         border: none;
-        color: rgba(255, 255, 255, 0.8);
+        outline: none;
+        color: white;
         font-size: 18px;
         font-weight: 400;
 
@@ -64,12 +85,44 @@ button {
             color: white;
         }
     }
+
+    .input-wrapper {
+        width: 300px;
+
+        input {
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 18px;
+                font-weight: 400;
+                transition: ease-in 150ms;
+            }
+
+            &:hover::placeholder {
+                color: white;
+            }
+        }
+
+        .error {
+            color: $error-color;
+            font-size: 14px;
+            min-height: 18px;
+            margin-top: 8px;
+        }
+    }
 }
 
 .checkbox-container {
     display: inline-block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 25px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;

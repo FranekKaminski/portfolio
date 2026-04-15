@@ -3,28 +3,70 @@
         <h4>{{"contactme.heading" | translate}}</h4>
         <h3>{{"contactme.titleLine1" | translate}}<br>{{"contactme.titleLine2" | translate}}</h3>
         <span class="skilltext2">{{"contactme.subtitle" | translate}}</span>
-        <p class="basicwhite16 firstptag">{{"contactme.intro1" | translate}}<br>{{"contactme.intro2" | translate}}<br><br>{{"contactme.intro3" | translate}} <span class="textcolor">{{"contactme.talk" | translate}}</span></p>
+        <p class="basicwhite16 firstptag">{{"contactme.intro1" | translate}}<br>{{"contactme.intro2" |
+            translate}}<br><br>{{"contactme.intro3" | translate}} <span class="textcolor">{{"contactme.talk" |
+                translate}}</span></p>
     </div>
-    <div class="contactme-right">
+
+
+    <form class="contactme-right" [formGroup]="form" (ngSubmit)="submit()">
         <article class="questions-container">
             <p class="formquestions">{{"contactme.nameQuestion" | translate}}</p>
-            <input type="text" placeholder="{{'contactme.namePlaceholder' | translate}}">
+            <div class="input-wrapper">
+                <input [class.error-border]="name?.touched && name?.invalid"
+                    placeholder="{{'contactme.namePlaceholder' | translate}}" type="name" formControlName="name" />
+                <div class="error">
+                    @if (name?.touched && name?.errors?.['required']) {
+                    {{'contactme.errors.nameRequired' | translate}}
+                    }
+                    @else if(name?.touched && name?.errors?.['minlength']) {
+                    {{'contactme.errors.nameMinlength' | translate}}
+                    }
+                </div>
+            </div>
         </article>
         <article class="questions-container">
             <p class="formquestions">{{"contactme.emailQuestion" | translate}}</p>
-            <input type="text" placeholder="{{'contactme.emailPlaceholder' | translate}}">
+            <div class="input-wrapper">
+                <input [class.error-border]="email?.touched && email?.invalid"
+                    placeholder="{{'contactme.emailPlaceholder' | translate}}" formControlName="email" />
+                <div class="error">
+                    @if (email?.touched && email?.errors?.['required']) {
+                    {{'contactme.errors.emailRequired' | translate}}
+                    }
+                    @else if(email?.touched && email?.errors?.['email']) {
+                    {{'contactme.errors.emailInvalid' | translate}}
+                    }
+                </div>
+            </div>
         </article>
         <article class="questions-container">
             <p class="formquestions">{{"contactme.helpQuestion" | translate}}</p>
-            <input type="text" placeholder="{{'contactme.helpPlaceholder' | translate}}">
+            <div class="input-wrapper">
+                <input [class.error-border]="message?.touched && message?.invalid"
+                    placeholder="{{'contactme.helpPlaceholder' | translate}}" formControlName="message" />
+                <div class="error">
+                    @if (message?.touched && message?.errors?.['required']) {
+                    {{'contactme.errors.messageRequired' | translate}}
+                    }
+                    @else if(message?.touched && message?.errors?.['minlength']) {
+                    {{'contactme.errors.messageMinlength' | translate}}
+                    }
+                </div>
+            </div>
         </article>
         <div class="policyagree">
             <label class="checkbox-container">
                 <input type="checkbox">
                 <span class="checkmark"></span>
             </label>
-            <span class="agreepolicytext">{{"contactme.privacyText" | translate}}</span>
+            <span class="agreepolicytext">
+                {{"contactme.privacyPrefix" | translate}}
+                <a class="policy-link" routerLink="/imprint">{{"contactme.privacyPolicy" | translate}}</a>
+                {{"contactme.privacySuffix" | translate}}
+            </span>
         </div>
         <button class="main-button">{{"contactme.button" | translate}}</button>
-    </div>
+    </form>
+
 </section>

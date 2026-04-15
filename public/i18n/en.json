@@ -35,6 +35,7 @@
         "heading": "Portfolio",
         "title": "Featured Projects",
         "intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "skilltext2": "What is this project about?",
         "project1": "Join",
         "project2": "El Pollo Loco",
         "project3": "DA Bubble",
@@ -76,8 +77,19 @@
         "emailPlaceholder": "youremail@email.com",
         "helpQuestion": "How can I help you?",
         "helpPlaceholder": "Hello Franek, I am interested in...",
+        "privacyPrefix": "I've read the",
+        "privacyPolicy": "privacy policy",
+        "privacySuffix": "and agree to the processing of my data as outlined.",
         "privacyText": "I've read the privacy policy and agree to the processing of my data as outlined.",
-        "button": "Send message"
+        "button": "Send message",
+        "errors": {
+            "nameRequired": "Oops! it seems your name is missing",
+            "nameMinlength": "Name has to be at least 3 Characters",
+            "emailRequired": "Hoppla! Your email is required",
+            "emailInvalid": "This is not a valid Email",
+            "messageRequired": "What do you need to develop?",
+            "messageMinlength": "Message needs to have at least 10 characters"
+        }
     },
     "footer": {
         "jobTitle": "Full Stack Developer",
