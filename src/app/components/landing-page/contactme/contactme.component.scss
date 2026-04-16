@@ -19,6 +19,19 @@ p {
     display: flex;
 }
 
+.input-wrapper input:-webkit-autofill,
+.input-wrapper input:-webkit-autofill:hover,
+.input-wrapper input:-webkit-autofill:focus,
+.input-wrapper input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: white !important;
+    caret-color: white;
+    background: none !important;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: inherit;
+}
+
 .agreepolicytext {
     color: rgba(255, 255, 255, 0.8);
 }

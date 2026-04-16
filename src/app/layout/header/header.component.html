@@ -7,9 +7,9 @@
                 <button [class.active]="currentLang() === 'en'" (click)="useLanguage('en')">EN</button>
                 <button [class.active]="currentLang() === 'de'" (click)="useLanguage('de')">DE</button>
             </div>
-            <a href="#aboutme">{{"header.aboutme" | translate}}</a>
-            <a href="#skills">{{"header.skills" | translate}}</a>
-            <a href="#portfolio">{{"header.projects" | translate}}</a>
+            <a [routerLink]="['/']" fragment="aboutme">{{"header.aboutme" | translate}}</a>
+            <a [routerLink]="['/']" fragment="skills">{{"header.skills" | translate}}</a>
+            <a [routerLink]="['/']" fragment="portfolio">{{"header.projects" | translate}}</a>
         </div>
         <img class="logo desktop-logo" src="icons/logo/FKLogo.png" alt="Logo">
 
@@ -21,9 +21,9 @@
 
         @if (isMobileMenuOpen()) {
         <div class="mobile-menu-dialog">
-            <a href="#aboutme" (click)="closeMobileMenu()">{{"header.aboutme" | translate}}</a>
-            <a href="#skills" (click)="closeMobileMenu()">{{"header.skills" | translate}}</a>
-            <a href="#portfolio" (click)="closeMobileMenu()">{{"header.projects" | translate}}</a>
+            <a [routerLink]="['/']" fragment="aboutme" (click)="closeMobileMenu()">{{"header.aboutme" | translate}}</a>
+            <a [routerLink]="['/']" fragment="skills" (click)="closeMobileMenu()">{{"header.skills" | translate}}</a>
+            <a [routerLink]="['/']" fragment="portfolio" (click)="closeMobileMenu()">{{"header.projects" | translate}}</a>
             <div class="lang-switch mobile-lang-switch">
                 <button [class.active]="currentLang() === 'en'" (click)="useLanguage('en'); closeMobileMenu()">EN</button>
                 <button [class.active]="currentLang() === 'de'" (click)="useLanguage('de'); closeMobileMenu()">DE</button>
