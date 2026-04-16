@@ -55,10 +55,13 @@
                     }
                 </div>
                 <div class="dialog-actions">
-                    <button class="main-button dialog-action-button">{{ 'portfolio.dialog.github' | translate }}<img
-                            src="icons/portfolio/arrow_outward_color.png" alt="arrow icon"></button>
-                    <button class="main-button dialog-action-button">{{ 'portfolio.dialog.liveTest' | translate }}<img
-                            src="icons/portfolio/arrow_outward_color.png" alt="arrow icon"></button>
+                    <a class="main-button dialog-action-button" [href]="selectedProject.githubUrl" target="_blank"
+                        rel="noopener noreferrer">{{ 'portfolio.dialog.github' | translate }}<img
+                            src="icons/portfolio/arrow_outward_color.png" alt="arrow icon"></a>
+                    <a class="main-button dialog-action-button" [attr.href]="selectedProject.liveUrl || null" target="_blank"
+                        rel="noopener noreferrer" [class.is-disabled]="!selectedProject.liveUrl"
+                        [attr.aria-disabled]="!selectedProject.liveUrl">{{ 'portfolio.dialog.liveTest' | translate }}<img
+                            src="icons/portfolio/arrow_outward_color.png" alt="arrow icon"></a>
                 </div>
             </div>
             <div class="dialog-right">

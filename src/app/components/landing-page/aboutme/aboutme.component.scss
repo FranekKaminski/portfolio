@@ -59,28 +59,40 @@ p {
 }
 
 @media (max-width: 660px) {
+    .left-about-me {
+        width: 100%
+    }
+
+    .right-about-me {
+        width: 100%
+    }
+
     .about-me {
         flex-direction: column;
         gap: 35px;
 
         .profilepic {
-            height: 380px;
-            width: 380px;
+            height: 100%;
+            width: 100%;
             top: 0;
             left: 5px;
         }
 
         .stripes {
-            height: 380px;
-            width: 380px;
+            height: 100%;
+            width: 100%;
             top: 15px;
             left: -10px;
         }
     }
 
+    .margin-bottom {
+        margin-bottom: 20px;
+    }
+
     .neon-box {
-        height: 650px;
-        width: 380px;
+        height: 100%;
+        width: 100%;
     }
 }
 

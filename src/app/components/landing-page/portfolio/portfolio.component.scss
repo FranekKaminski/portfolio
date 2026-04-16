@@ -208,9 +208,13 @@ h3 {
             gap: 20px;
 
             .dialog-action-button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 gap: 10px;
                 width: 180px;
                 margin-top: 0;
+                text-decoration: none;
 
                 img {
                     transition: transform 0.2s ease;
@@ -218,6 +222,11 @@ h3 {
 
                 &:hover img {
                     transform: translate(4px, -4px);
+                }
+
+                &.is-disabled {
+                    pointer-events: none;
+                    opacity: 0.6;
                 }
             }
         }

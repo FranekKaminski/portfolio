@@ -11,7 +11,8 @@ type PortfolioProject = {
   titleKey: string;
   descriptionKey: string;
   image: string;
-  link: string;
+  githubUrl: string;
+  liveUrl?: string;
   skills: ProjectSkill[];
 };
 
@@ -34,7 +35,7 @@ export class PortfolioComponent {
       titleKey: 'portfolio.dialog.project1.title',
       descriptionKey: 'portfolio.dialog.project1.description',
       image: 'icons/portfolio/join1.png',
-      link: '#',
+      githubUrl: 'https://github.com/FranekKaminski',
       skills: [
         { label: 'Angular', icon: 'icons/portfolio/Property 1=Angular.png' },
         { label: 'TypeScript', icon: 'icons/portfolio/Property 1=TypeScript.png' },
@@ -48,7 +49,8 @@ export class PortfolioComponent {
       titleKey: 'portfolio.dialog.project2.title',
       descriptionKey: 'portfolio.dialog.project2.description',
       image: 'icons/portfolio/elpolloloco1.png',
-      link: '#',
+      githubUrl: 'https://github.com/FranekKaminski',
+      liveUrl: 'https://franciszekkaminski.developerakademie.net/Modul%2012%20El%20Pollo%20Loco/',
       skills: [
         { label: 'Javascript', icon: 'icons/portfolio/Property 1=Javascript.png' },
         { label: 'HTML', icon: 'icons/portfolio/html.png' },
@@ -60,7 +62,7 @@ export class PortfolioComponent {
       titleKey: 'portfolio.dialog.project3.title',
       descriptionKey: 'portfolio.dialog.project3.description',
       image: 'icons/portfolio/dabubble1.png',
-      link: '#',
+      githubUrl: 'https://github.com/FranekKaminski',
       skills: [
         { label: 'Javascript', icon: 'icons/portfolio/Property 1=Javascript.png' },
         { label: 'HTML', icon: 'icons/portfolio/html.png' },

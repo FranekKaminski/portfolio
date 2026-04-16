@@ -73,7 +73,7 @@
     height: 300px;
     width: 300px;
     position: absolute;
-    left: -35px;
+    left: max(-35px, calc(50% - 755px));
     bottom: 0;
     z-index: 1;
 }
@@ -85,7 +85,7 @@
     height: 400px;
     width: 100px;
     position: absolute;
-    right: 60px;
+    right: max(60px, calc(50% - 660px));
     bottom: 0;
     z-index: 1;
 }
@@ -94,6 +94,11 @@
     position: relative;
     display: inline-flex;
     align-items: center;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
 
     &::after {
         content: '';
@@ -130,15 +135,13 @@
 
 .hero-mail-mobile {
     display: none;
-    transform: none;
-    margin-bottom: 0;
 }
 
 .hero-email {
     display: block;
 }
 
-.rightelements > a {
+.hero-email {
     text-decoration: none;
     color: white;
     transform: rotate(-90deg);
@@ -174,6 +177,21 @@
     align-items: center;
 }
 
+.movingarrowbox img {
+    animation: arrow-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes arrow-pulse {
+    0%,
+    100% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+}
+
 @media (max-width: 660px) {
     .rightelements {
         right: -25px;
@@ -190,6 +208,8 @@
 
     .hero-mail-mobile {
         display: inline-flex;
+        transform: none;
+        margin-bottom: 0;
     }
 
     .hero-socials {
