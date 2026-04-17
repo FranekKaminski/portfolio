@@ -1,7 +1,10 @@
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     font-family: "Karla";
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 // body {

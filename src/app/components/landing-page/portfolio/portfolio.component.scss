@@ -14,7 +14,7 @@
     align-items: center;
     border-bottom: 1px solid $primary-color-1;
     padding: 30px 0px;
-    width: 850px;
+    width: min(850px, 100%);
     transition: ease-in 150ms;
 
     &:hover {
@@ -33,7 +33,7 @@
     align-items: center;
     border-bottom: 1px solid $primary-color-1;
     padding: 30px 0px;
-    width: 850px;
+    width: min(850px, 100%);
 }
 
 .portfolio-box {
@@ -365,7 +365,7 @@ h3 {
     }
 }
 
-@media (max-width: 1184px) {
+@media (max-width: 1300px) {
     .portfolio-section {
         flex-direction: column !important;
         align-items: flex-start;
@@ -389,8 +389,8 @@ h3 {
 
 @media (max-width: 660px) {
     .portfolio-dialog {
-        width: calc(100vw - 24px);
-        max-width: calc(100vw - 24px);
+        width: calc(100vw - 30px);
+        max-width: calc(100vw - 30px);
         padding: 20px 18px 24px;
         border-radius: 20px;
         gap: 24px;
@@ -449,7 +449,7 @@ h3 {
 
             .dialog-image-container {
                 .dialog-image {
-                    width: 108%;
+                    width: 100%;
                 }
             }
 

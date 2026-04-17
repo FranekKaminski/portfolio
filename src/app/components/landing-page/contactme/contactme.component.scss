@@ -78,7 +78,7 @@ button {
     }
 
     >input {
-        width: 300px;
+        width: min(300px, 100%);
         background: none;
         border: none;
         outline: none;
@@ -100,7 +100,7 @@ button {
     }
 
     .input-wrapper {
-        width: 300px;
+        width: min(300px, 100%);
 
         input {
             width: 100%;
